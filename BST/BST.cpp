@@ -245,5 +245,5 @@ void BST::printFromRight(Node* node, int level) const
 
 void BST::printFromRight() const
 {
-    printFromRight(root, 0);
+    printFromRight(root, -1);
 }
