@@ -32,6 +32,7 @@ public:
     Node* getSuccessor(Node*) const;
     Node* getPredecessor(Node*) const;
     void remove(int);
+    void printFromRight() const;
 
 private:
     void destroyTree(Node*);
@@ -41,6 +42,7 @@ private:
     void LNR(Node*, void(*)(int));
     void LRN(Node*, void(*)(int));
     Node* remove(Node*, int);
+    void printFromRight(Node*, int) const;
 
 private:
     Node* root;

@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <limits.h>
+#include <iostream>
 
 BST::BST()
     : root{nullptr}
@@ -226,4 +227,23 @@ void BST::remove(int key)
 {
     root = remove(root, key);
     --size;
+}
+
+void BST::printFromRight(Node* node, int level) const
+{
+    if (!node) {
+        return;
+    }
+    ++level;
+    printFromRight(node->right, level);
+    for (int i = 0; i < level; ++i) {
+        std::cout << "\t";
+    }
+    std::cout << node->val << std::endl;
+    printFromRight(node->left, level);
+}
+
+void BST::printFromRight() const
+{
+    printFromRight(root, 0);
 }

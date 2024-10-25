@@ -76,7 +76,12 @@ int main()
     } else {
         std::cout << "Doesn't have predecessor.\n";
     }
-    
+
+    std::cout << "Printed from right:\n";
+    myTree.printFromRight();
+    std::cout << std::endl;
+
+    std::cout << "After removing: ";
     myTree.remove(7);
     myTree.LNR(print);
     std::cout << std::endl;
